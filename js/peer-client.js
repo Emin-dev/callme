@@ -28,7 +28,7 @@ peerapp = (function() {
     console.log(peer)
 
     initializeLocalMedia({'audio': true, 'video': true});
-my-video
+
     // Generate random ID
     function generateRandomID(length) {
         var chars = '123456789abcdefghijklmnopqrstuvwxyz'
@@ -79,7 +79,7 @@ my-video
             window.existingCall.close();
         }
 
-        // Wait for stream on the call, then set peer vide0 display
+        // Wait for stream on the call, then set peer video display
         call.on('stream', function(stream) {
             myapp.setTheirVideo(stream)
         });
@@ -107,14 +107,14 @@ my-video
             console.log(call)
             // New call requests from users
             // Ask Confirm before accepting call
-            if(window.incomingCall) {
-                window.incomingCall.answer()
-                setTimeout(function () {
-                    window.incomingCall.close();
-                    window.incomingCall = call
-                    myapp.showIncomingCall(call.peer);
-                }, 2000)
-            } else {
+            // if(window.incomingCall) {
+            //     window.incomingCall.answer()
+            //     setTimeout(function () {
+            //         window.incomingCall.close();
+            //         window.incomingCall = call
+            //         myapp.showIncomingCall(call.peer);
+            //     }, 1000)
+            // } else {
             if(window.existingCall) {
                 // If already in a call, rejecting the new calls
                 rejectIncomingCall(call)
@@ -122,7 +122,7 @@ my-video
                 window.incomingCall = call
                 myapp.showIncomingCall(call.peer, call.options.metadata);
             }
-            }
+            // }
         });
 
         peer.on('close', function(conn) {
@@ -313,7 +313,7 @@ my-video
     // Update Online users on every 5 seconds
     setInterval(function () {
         fetchOnlinePeers()
-    }, 2000)
+    }, 5000)
 
     return {
         makeCall : makeCall,
