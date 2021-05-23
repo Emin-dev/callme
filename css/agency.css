@@ -3,9 +3,7 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
- *{
-   border-radius: 50px;
- }
+ 
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -413,7 +411,7 @@ body {
   border-top-color: #337ab7;
 }
 .panel-primary > .panel-heading .badge {
-  color: #337ab7;
+  color: #9C6644;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
@@ -441,7 +439,7 @@ body {
   border-color: #bce8f1;
 }
 .panel-info > .panel-heading {
-  color: #31708f;
+  color: #9C6644;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
@@ -450,7 +448,7 @@ body {
 }
 .panel-info > .panel-heading .badge {
   color: #d9edf7;
-  background-color: #31708f;
+  background-color: #9C6644;
 }
 .panel-info > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #bce8f1;
