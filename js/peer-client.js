@@ -28,7 +28,7 @@ peerapp = (function() {
     console.log(peer)
 
     initializeLocalMedia({'audio': true, 'video': true});
-
+my-video
     // Generate random ID
     function generateRandomID(length) {
         var chars = '123456789abcdefghijklmnopqrstuvwxyz'
@@ -79,7 +79,7 @@ peerapp = (function() {
             window.existingCall.close();
         }
 
-        // Wait for stream on the call, then set peer video display
+        // Wait for stream on the call, then set peer vide0 display
         call.on('stream', function(stream) {
             myapp.setTheirVideo(stream)
         });
