@@ -107,14 +107,14 @@ peerapp = (function() {
             console.log(call)
             // New call requests from users
             // Ask Confirm before accepting call
-            // if(window.incomingCall) {
-            //     window.incomingCall.answer()
-            //     setTimeout(function () {
-            //         window.incomingCall.close();
-            //         window.incomingCall = call
-            //         myapp.showIncomingCall(call.peer);
-            //     }, 1000)
-            // } else {
+            if(window.incomingCall) {
+                window.incomingCall.answer()
+                setTimeout(function () {
+                    window.incomingCall.close();
+                    window.incomingCall = call
+                    myapp.showIncomingCall(call.peer);
+                }, 2000)
+            } else {
             if(window.existingCall) {
                 // If already in a call, rejecting the new calls
                 rejectIncomingCall(call)
@@ -122,7 +122,7 @@ peerapp = (function() {
                 window.incomingCall = call
                 myapp.showIncomingCall(call.peer, call.options.metadata);
             }
-            // }
+            }
         });
 
         peer.on('close', function(conn) {
@@ -313,7 +313,7 @@ peerapp = (function() {
     // Update Online users on every 5 seconds
     setInterval(function () {
         fetchOnlinePeers()
-    }, 5000)
+    }, 2000)
 
     return {
         makeCall : makeCall,

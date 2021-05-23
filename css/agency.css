@@ -400,22 +400,22 @@ body {
   border-bottom-color: #ddd;
 }
 .panel-primary {
-  border-color: #337ab7;
+  border-color: #9C6644;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #9C6644;
+  border-color: #9C6644;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
+  border-top-color: #9C6644;
 }
 .panel-primary > .panel-heading .badge {
   color: #9C6644;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
+  border-bottom-color: #9C6644;
 }
 .panel-success {
   border-color: #d6e9c6;
